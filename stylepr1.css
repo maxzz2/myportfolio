@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #0057ff; /* Синій колір Behance */
+    --secondary-color: #2c2c2c; /* Темно-сірий */
+    --text-color: #f0f0f0; /* Світлий текст */
+    --bg-color: #1a1a1a; /* Темний фон */
+    --card-bg-color: #2a2a2a; /* Фон карток */
+    --border-color: #444; /* Колір обводки */
+    --hover-color: #007bff; /* Колір при наведенні */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-secondary {
+    background-color: var(--card-bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--border-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--card-bg-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a.btn {
+    padding: 8px 15px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px 0;
+}
+
+.profile-section {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Ширина сайдбару та основний контент */
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-card .title {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.profile-card .company {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.profile-card .location {
+    color: #bbb;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.profile-card .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.stats-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.stats-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.stats-card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 15px;
+}
+
+.stats-card ul li:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: #ccc;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: var(--text-color);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.project-author {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.project-stats i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--card-bg-color);
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .profile-section {
+        grid-template-columns: 1fr; /* Сайдбар і контент в один стовпець */
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Один проєкт на рядок */
+    }
+
+    .portfolio-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
